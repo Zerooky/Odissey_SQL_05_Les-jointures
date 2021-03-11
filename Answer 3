@@ -1,0 +1,5 @@
+SELECT wizard.firstname, wizard.lastname
+FROM wizard
+LEFT JOIN player ON player.wizard_id = wizard.id
+WHERE role IS NULL
+ORDER BY lastname ASC, firstname ASC;
