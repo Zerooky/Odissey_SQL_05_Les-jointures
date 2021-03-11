@@ -1,0 +1,5 @@
+SELECT wizard.lastname, wizard.firstname, player.role, team.name AS team
+FROM player
+JOIN wizard ON player.wizard_id = wizard.id
+JOIN team ON player.team_id = team.id
+ORDER BY team ASC, role ASC, lastname ASC, firstname ASC;
